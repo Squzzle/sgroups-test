@@ -21,9 +21,9 @@ jobs:
           node-version: 18
           cache: npm
       - name: Build Doc
+        working-directory: ./documentation
         run: |
           export DOC_INCLUDE_CURRENT_VERSION=false
-          cd documentation
           npm install
           npm run build
 
