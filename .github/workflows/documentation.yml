@@ -32,6 +32,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: .documentation/build
+          publish_dir: ./build
           user_name: Squzzle
           user_email: squzzle@bot.com
