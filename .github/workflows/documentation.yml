@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        working-directory: ./documentation
         with:
-          working-directory: ./documentation
           fetch-depth: 0
       - uses: actions/setup-node@v4
+        working-directory: ./documentation
         with:
-          working-directory: ./documentation
           node-version: 18
           cache: npm
       - name: Build Doc
@@ -32,8 +32,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          working-directory: ./documentation
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: ./build
+          publish_dir: .documentation/build
           user_name: Squzzle
           user_email: squzzle@bot.com
