@@ -89,6 +89,10 @@ const config: Config = {
           position: 'left',
           label: 'Техническая документация',
         },
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+        },
       ],
     },
     colorMode: {
