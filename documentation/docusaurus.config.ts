@@ -8,7 +8,7 @@ const config: Config = {
 
   // Set the production url of your site here
   url: 'http://localhost',
-  baseUrl: '/swarm_doc/',
+  baseUrl: '/sgroups-test/',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -32,6 +32,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
+          includeCurrentVersion: process.env.DOC_INCLUDE_CURRENT_VERSION && process.env.DOC_INCLUDE_CURRENT_VERSION.toLowerCase() === 'true' || false
         },
         blog: false,
         pages: {
