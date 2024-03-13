@@ -112,7 +112,7 @@ const config: Config = {
 
   scripts: [
     {
-      src: '/swarm_doc/js/observer.js',
+      src: '/sgroups-test/js/observer.js',
       async: false,
     },
   ],
